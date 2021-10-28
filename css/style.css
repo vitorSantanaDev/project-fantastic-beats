@@ -232,20 +232,20 @@ body {
   }
 }
 
-.js-accordion dd {
+.js .js-accordion dd {
   display: none;
 }
 
-.js-accordion dt::after {
+.js .js-accordion dt::after {
   content: "⮧";
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+.js .js-accordion dt.ativo::after {
   content: "⮤";
 }
 
-.js-accordion dd.ativo {
+.js .js-accordion dd.ativo {
   display: block;
   animation: slidDwon .5s forwards;
 }
