@@ -1,15 +1,17 @@
 function initTabNavigation() {
-  const tabMenu = document.querySelectorAll(".js-tabMenu li");
-  const tabContent = document.querySelectorAll(".js-tabContent section");
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
+  console.log(tabContent)
 
   if (tabMenu.length && tabContent.length) {
-    tabContent[0].classList.add("ativo");
+    tabContent[0].classList.add("ativo", "show-right");
 
     const activeTab = (index) => {
       tabContent.forEach((section) => {
         section.classList.remove("ativo");
       });
-      tabContent[index].classList.add("ativo");
+      const direction = tabContent[index].dataset.anima
+      tabContent[index].classList.add("ativo", direction);
     };
 
     tabMenu.forEach((item, index) => {
@@ -23,7 +25,7 @@ initTabNavigation();
 
 function initAccordionList() {
   const activeClass = "ativo";
-  const accordionItem = document.querySelectorAll(".js-accordion dt");
+  const accordionItem = document.querySelectorAll('[data-anima="accordion"] dt');
 
   if (accordionItem.length) {
     accordionItem[0].classList.add(activeClass);
@@ -42,7 +44,7 @@ function initAccordionList() {
 initAccordionList();
 
 function initScrollSuave() {
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  const internalLinks = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
   const scrollToSection = (event) => {
     event.preventDefault();
@@ -50,8 +52,8 @@ function initScrollSuave() {
     const section = document.querySelector(href);
 
     section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+      behavior: 'smooth',
+      block: 'start',
     });
 
     //  Forma alternativa
@@ -66,9 +68,10 @@ function initScrollSuave() {
     link.addEventListener("click", scrollToSection);
   });
 }
+initScrollSuave();
 
 function initScrollAnimation() {
-  const sections = document.querySelectorAll(".js-scroll");
+  const sections = document.querySelectorAll('[data-anima="scroll"]');
   if (sections.length) {
     const windowHalf = window.innerHeight * 0.6;
 
