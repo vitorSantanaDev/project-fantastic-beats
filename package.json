@@ -1,0 +1,14 @@
+{
+  "name": "project-fantastic-beats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vitorSantanaDev/project-fantastic-beats.git",
+  "author": "vitorSantanaDev <vitorsantana.developer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
