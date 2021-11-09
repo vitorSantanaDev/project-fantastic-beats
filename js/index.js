@@ -5,6 +5,7 @@ import initAccordionList from "./modules/accordionList.js";
 import initModal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropMenu.js";
+import initMenuMobile from "./modules/menuMobile.js";
 
 initScrollSuave();
 initScrollAnimation();
@@ -13,3 +14,4 @@ initAccordionList();
 initModal();
 initTooltip();
 initDropDownMenu();
+initMenuMobile();
