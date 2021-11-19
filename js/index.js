@@ -7,6 +7,7 @@ import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
+import initFetchBitcoin from "./modules/fetchBitcoin.js";
 
 initScrollSuave();
 initScrollAnimation();
@@ -17,3 +18,4 @@ initTooltip();
 initDropDownMenu();
 initMenuMobile();
 initFetchAnimais();
+initFetchBitcoin();
