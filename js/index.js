@@ -8,6 +8,7 @@ import initDropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetchBitcoin.js";
+import { SlideNav } from "./controller/controllerSlide.js";
 
 initScrollSuave();
 initScrollAnimation();
@@ -19,3 +20,7 @@ initDropDownMenu();
 initMenuMobile();
 initFetchAnimais();
 initFetchBitcoin();
+
+const slide = new SlideNav(".slideWrapper", ".slideItems");
+slide.init();
+slide.addControll('.customControll');
