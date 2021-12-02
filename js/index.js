@@ -1,4 +1,4 @@
-import initTabNavigation from "./modules/tabNavigate.js";
+import TabNavigation from "./modules/tabNavigate.js";
 import initScrollAnimation from "./modules/scrollAnimation.js";
 import ScrollSuave from "./modules/scrollSuave.js";
 import AccordionList from "./modules/accordionList.js";
@@ -16,8 +16,10 @@ scrollSuave.init();
 const accordionList = new AccordionList('[data-anima="accordion"] dt')
 accordionList.init();
 
+const tabNavigate = new TabNavigation('[data-tab="menu"] li', '[data-tab="content"] section')
+tabNavigate.init()
+
 initScrollAnimation();
-initTabNavigation();
 initModal();
 initTooltip();
 initDropDownMenu();
