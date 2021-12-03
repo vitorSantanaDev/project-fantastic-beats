@@ -3,7 +3,7 @@ import initScrollAnimation from "./modules/scrollAnimation.js";
 import ScrollSuave from "./modules/scrollSuave.js";
 import AccordionList from "./modules/accordionList.js";
 import Modal from "./modules/modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
@@ -24,7 +24,9 @@ const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-
 modal.init();
 
 
-initTooltip();
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 initDropDownMenu();
 initMenuMobile();
 initFetchAnimais();
