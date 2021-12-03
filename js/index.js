@@ -2,7 +2,7 @@ import TabNavigation from "./modules/tabNavigate.js";
 import initScrollAnimation from "./modules/scrollAnimation.js";
 import ScrollSuave from "./modules/scrollSuave.js";
 import AccordionList from "./modules/accordionList.js";
-import initModal from "./modules/modal.js";
+import Modal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
@@ -20,7 +20,10 @@ const tabNavigate = new TabNavigation('[data-tab="menu"] li', '[data-tab="conten
 tabNavigate.init()
 
 initScrollAnimation();
-initModal();
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
+modal.init();
+
+
 initTooltip();
 initDropDownMenu();
 initMenuMobile();
