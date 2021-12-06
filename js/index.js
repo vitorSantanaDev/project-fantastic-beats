@@ -6,7 +6,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
-import initFetchAnimais from "./modules/fetchAnimais.js";
+import fetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetchBitcoin.js";
 import { SlideNav } from "./controller/controllerSlide.js";
 
@@ -29,8 +29,8 @@ tooltip.init();
 
 initDropDownMenu();
 initMenuMobile();
-initFetchAnimais();
 initFetchBitcoin();
+fetchAnimais('../../animais.api.json', '.numeros-grid');
 
 const slide = new SlideNav(".slideWrapper", ".slideItems");
 slide.init();
