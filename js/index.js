@@ -29,7 +29,7 @@ tooltip.init();
 
 initDropDownMenu();
 initMenuMobile();
-initFetchBitcoin();
+initFetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 fetchAnimais('../../animais.api.json', '.numeros-grid');
 
 const slide = new SlideNav(".slideWrapper", ".slideItems");
