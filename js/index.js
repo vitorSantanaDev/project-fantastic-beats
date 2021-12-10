@@ -1,5 +1,5 @@
 import TabNavigation from "./modules/tabNavigate.js";
-import initScrollAnimation from "./modules/scrollAnimation.js";
+import ScrollAnimation from "./modules/scrollAnimation.js";
 import ScrollSuave from "./modules/scrollSuave.js";
 import AccordionList from "./modules/accordionList.js";
 import Modal from "./modules/modal.js";
@@ -19,7 +19,9 @@ accordionList.init();
 const tabNavigate = new TabNavigation('[data-tab="menu"] li', '[data-tab="content"] section')
 tabNavigate.init()
 
-initScrollAnimation();
+const scrollAnimation = new ScrollAnimation('[data-anima="scroll"]');
+scrollAnimation.init()
+
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
@@ -29,6 +31,7 @@ tooltip.init();
 
 initDropDownMenu();
 initMenuMobile();
+
 initFetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 fetchAnimais('../../animais.api.json', '.numeros-grid');
 
