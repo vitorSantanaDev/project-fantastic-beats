@@ -4,7 +4,7 @@ import ScrollSuave from "./modules/scrollSuave.js";
 import AccordionList from "./modules/accordionList.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropDownMenu from "./modules/dropMenu.js";
+import DropDownMenu from "./modules/dropMenu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetchBitcoin.js";
@@ -29,7 +29,9 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-initDropDownMenu();
+const dropDownMenu = new DropDownMenu("[data-dropdown]");
+dropDownMenu.init();
+
 initMenuMobile();
 
 initFetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
